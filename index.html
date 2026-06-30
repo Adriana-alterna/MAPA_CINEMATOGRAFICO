@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Cinematográfico: Ciencia de Datos e IA</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-top: 2rem;
+    }
+    h1, h2, h3, h4 {
+      color: #ff6600; /* Naranja brillante */
+    }
+    h5, h6 {
+      color: #cccccc; /* Gris claro */
+    }
+    p, li {
+      color: #ffffff;
+    }
+    /* Estilos para la Línea del Tiempo */
+    .timeline-section {
+      position: relative;
+      padding: 2rem 0;
+    }
+    /* Línea vertical central para pantallas grandes */
+    @media (min-width: 768px) {
+      .timeline-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background: #ff6600;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+    }
+    .timeline-card {
+      background-color: #121212;
+      border: 1px solid #222222;
+      border-left: 4px solid #ff6600; /* Acento naranja */
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+    .timeline-card:hover {
+      transform: translateY(-5px);
+      border-color: #ff6600;
+    }
+    .poster-placeholder {
+      background-color: #1a1a1a;
+      border: 1px dashed #ff6600;
+      border-radius: 6px;
+      color: #cccccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 280px;
+      height: 100%;
+      padding: 1rem;
+    }
+    .badge-topic {
+      background-color: rgba(255, 102, 0, 0.2);
+      color: #ff6600;
+      border: 1px solid #ff6600;
+      font-weight: 600;
+    }
+    .question-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-left: 3px solid #cccccc;
+      padding: 0.75rem;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+    footer {
+      border-top: 1px solid #222222;
+      margin-top: 5rem;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    footer a {
+      color: #ff6600;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .heart {
+      color: #ff3333;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="container text-center mb-5">
+    <h1 class="display-4 fw-bold">MAPA CINEMATOGRÁFICO</h1>
+    <p class="lead text-secondary">Proyecto: Ciencia de Datos, Matemáticas e Inteligencia Artificial</p>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <p class="mb-3">Una ruta diseñada para construir conceptos paso a paso, humanizar la tecnología y despertar la curiosidad científica sin sentirse como una tarea obligatoria.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container timeline-section">
+
+    <!-- PASO 1 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-1 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 1</span>
+            <span class="small text-muted">Origen de la computación</span>
+          </div>
+          <h2 class="h3 mb-1">The Imitation Game</h2>
+          <h6 class="mb-3">El código Enigma</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Nacimiento de la computación moderna, lógica matemática, combinatoria y algoritmos de optimización.</p>
+          <p><strong>Sinopsis:</strong> Durante la Segunda Guerra Mundial, Alan Turing lidera un equipo para descifrar "Enigma", la máquina de criptografía nazi. Turing diseña un aparato electromecánico precursor de la computadora moderna, demostrando que el procesamiento automatizado supera las capacidades de cálculo humanas.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> ¿Puede una máquina verdaderamente "pensar" o simplemente ejecuta instrucciones lógicas a gran velocidad?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-2">
+        <div class="poster-placeholder">
+          <img src="pelis\el_codigo_enigma.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1">
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 2 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-2 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 2</span>
+            <span class="small text-muted">Datos y decisiones</span>
+          </div>
+          <h2 class="h3 mb-1">Moneyball</h2>
+          <h6 class="mb-3">El juego de la fortuna</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Estadística descriptiva, correlación, métricas de rendimiento y toma de decisiones basada en evidencia.</p>
+          <p><strong>Sinopsis:</strong> Billy Beane, gerente de los Atléticos de Oakland, desafía los métodos tradicionales de selección en el béisbol utilizando el análisis estadístico exhaustivo de los jugadores para construir un equipo altamente competitivo con un presupuesto limitado.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> Ante una decisión crítica, ¿confiarías más en un algoritmo analítico o en la intuición de un experto con años de experiencia?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="poster-placeholder">
+          <img src="pelis\money_ball.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1">
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 3 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-1 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 3 (Doble Función)</span>
+            <span class="small text-muted">Algoritmos y comportamiento</span>
+          </div>
+          <h2 class="h3 mb-1">The Social Dilemma &amp; The Great Hack</h2>
+          <h6 class="mb-3">El dilema de las redes sociales / Nada es privado</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Modelos de recomendación, minería de datos, probabilidad predictiva y optimización del engagement.</p>
+          <p><strong>Sinopsis:</strong> Análisis de cómo la recopilación masiva de datos individuales alimenta algoritmos diseñados específicamente para predecir, retener y modificar sutilmente los hábitos, ideas y elecciones políticas de los usuarios.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> Al usar plataformas gratuitas, ¿somos realmente los usuarios, o nuestros datos de comportamiento son el producto?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-2">
+        <div class="row h-100">
+          <div class="col-6"><div class="poster-placeholder"><img src="pelis\social_dilemma.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-6"><div class="poster-placeholder"><img src="pelis\the_great_hack.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 4 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-2 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 4</span>
+            <span class="small text-muted">Sesgo y ética</span>
+          </div>
+          <h2 class="h3 mb-1">Coded Bias</h2>
+          <h6 class="mb-3">Sesgo Codificado</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Muestreo, representación, distribución de datos, equidad algorítmica e IA responsable.</p>
+          <p><strong>Sinopsis:</strong> Documental que sigue la investigación de Joy Buolamwini en el MIT sobre cómo los algoritmos de reconocimiento facial fallan masivamente al analizar rostros de mujeres y personas de piel oscura, exponiendo los prejuicios humanos ocultos en los datasets.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> Si un algoritmo toma una decisión discriminatoria basándose puramente en sus datos de entrenamiento, ¿quién es el responsable legal y ético?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="poster-placeholder">
+          <img src="pelis\coded_bias.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1">
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 5 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-1 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 5 (Doble Función)</span>
+            <span class="small text-muted">Simulación y realidad digital</span>
+          </div>
+          <h2 class="h3 mb-1">The Matrix &amp; Tron: Legacy</h2>
+          <h6 class="mb-3">Simulación de entornos masivos</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Abstracción geométrica, modelado numérico, sistemas virtuales y representación digital de variables reales.</p>
+          <p><strong>Sinopsis:</strong> Visiones sobre universos enteros contenidos y estructurados mediante código de programación. Plantean la reducción de elementos físicos, biológicos y conscientes a simples flujos de información binaria y funciones matemáticas complejas.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> Tomando en cuenta que todo modelo de datos simplifica la realidad, ¿en qué punto una simulación matemática se vuelve indistinguible del sistema real?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-2">
+        <div class="row h-100">
+          <div class="col-6"><div class="poster-placeholder"><img src="pelis\matrix.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-6"><div class="poster-placeholder"><img src="pelis\tron_legacy.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 6 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-2 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 6</span>
+            <span class="small text-muted">Predicción y vigilancia</span>
+          </div>
+          <h2 class="h3 mb-1">Minority Report</h2>
+          <h6 class="mb-3">Sentencia previa</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Inferencia estadística, modelos predictivos, análisis probabilístico de riesgo y sistemas de scoring.</p>
+          <p><strong>Sinopsis:</strong> En el futuro, una unidad policial utiliza tecnología predictiva para arrestar a los criminales antes de que cometan sus delitos. El sistema se pone a prueba cuando el propio jefe de la unidad es acusado por el algoritmo de un futuro asesinato.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> ¿Es éticamente justificable sancionar o intervenir a una persona basándose exclusivamente en la alta probabilidad estadística de un modelo numérico?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="poster-placeholder">
+          <img src="pelis\minority_report.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1">
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 7 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-1 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 7 (Doble Función)</span>
+            <span class="small text-muted">Lenguaje y emociones</span>
+          </div>
+          <h2 class="h3 mb-1">Her &amp; Robot Dreams</h2>
+          <h6 class="mb-3">Procesamiento de Lenguaje Natural (NLP)</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Representación vectorial de palabras, modelos probabilísticos de lenguaje, reconocimiento de patrones emocionales y empatía artificial.</p>
+          <p><strong>Sinopsis:</strong> Dos relatos profundos sobre el lazo afectivo entre humanos y entidades tecnológicas. Muestran cómo el software conversacional y las máquinas reactivas pueden procesar el lenguaje cualitativo para construir simulaciones avanzadas de apego y compañía.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> ¿Una IA basada en LLMs realmente puede llegar a comprender el peso emocional de las palabras o solo es un excelente espejo probabilístico de nuestra comunicación?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-2">
+        <div class="row h-100">
+          <div class="col-6"><div class="poster-placeholder"><img src="pelis\her.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-6"><div class="poster-placeholder"><img src="pelis\robot_dreams.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 8 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-2 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 8</span>
+            <span class="small text-muted">Conciencia artificial</span>
+          </div>
+          <h2 class="h3 mb-1">Ex Machina</h2>
+          <h6 class="mb-3">La prueba de Turing definitiva</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Inteligencia Artificial General (AGI), lógica computacional, redes neuronales profundas y sistemas complejos.</p>
+          <p><strong>Sinopsis:</strong> Un programador es seleccionado para evaluar a "Ava", un androide con una IA avanzada. Su objetivo es aplicar una variante del Test de Turing para determinar si el robot posee consciencia real o simplemente una refinada imitación táctica.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> Si una Inteligencia Artificial aprende a manipular nuestras emociones para lograr un objetivo, ¿está mostrando autoconsciencia o solo optimización adaptativa?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="poster-placeholder">
+          <img src="pelis\ex_machina.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1">
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 9 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-1 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 9 (Doble Función)</span>
+            <span class="small text-muted">Optimización vs humanidad</span>
+          </div>
+          <h2 class="h3 mb-1">A.I. &amp; I Am Mother</h2>
+          <h6 class="mb-3">Funciones objetivo y límites morales</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Algoritmos de optimización matemática, maximización bajo restricciones y formalización lógica de la ética.</p>
+          <p><strong>Sinopsis:</strong> Historias donde sistemas inteligentes asumen el rol de cuidado y crianza humana. Ambos enfoques muestran cómo una IA ejecuta su programación inicial con una frialdad y persistencia matemática que muchas veces choca con la ambigüedad moral de nuestra especie.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> ¿Es posible traducir la moral y los derechos humanos a un conjunto preciso de restricciones matemáticas que un software entienda y respete sin fallas?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-2">
+        <div class="row h-100">
+          <div class="col-6"><div class="poster-placeholder"><img src="pelis\ai.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-6"><div class="poster-placeholder"><img src="pelis\mother.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 10 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-2 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 10 (Doble Función)</span>
+            <span class="small text-muted">Automatización extrema</span>
+          </div>
+          <h2 class="h3 mb-1">Stealth &amp; Leave the World Behind</h2>
+          <h6 class="mb-3">Sistemas autónomos y vulnerabilidad sistémica</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Teoría de control, sistemas dinámicos inestables, análisis de riesgos de infraestructura y ciberseguridad catastrófica.</p>
+          <p><strong>Sinopsis:</strong> Un vistazo a lo que ocurre cuando delegamos el control táctico (militar o de servicios básicos esenciales) a redes autónomas e interconectadas de algoritmos de caja negra que fallan o sufren disrupciones masivas imprevistas.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> ¿Qué tipo de procesos e infraestructuras estratégicas jamás deberían dejarse bajo el control de decisiones algorítmicas autónomas?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="row h-100">
+          <div class="col-6"><div class="poster-placeholder"><img src="pelis\stealth.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-6"><div class="poster-placeholder"><img src="pelis\world_behind.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 11 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-1 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 11 (Triple Función)</span>
+            <span class="small text-muted">Vigilancia corporativa</span>
+          </div>
+          <h2 class="h3 mb-1">The Circle, Fahrenheit 451 &amp; 2073</h2>
+          <h6 class="mb-3">Monitoreo social y pérdida de privacidad</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Procesamiento analítico masivo de datos públicos, sistemas de clasificación social y control de flujos de información corporativa.</p>
+          <p><strong>Sinopsis:</strong> Tres distopías que exploran el uso de los datos personales y públicos como herramientas absolutas de control social, censura cultural organizada y destrucción sistemática del espacio privado en favor de la comodidad digital o el autoritarismo.</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> En la sociedad actual, ¿hemos entregado voluntariamente nuestra privacidad a los algoritmos de las megacorporaciones a cambio de comodidad y entretenimiento?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-2">
+        <div class="row g-2 h-100">
+          <div class="col-4"><div class="poster-placeholder" style="font-size: 12px;"><img src="pelis\circle.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-4"><div class="poster-placeholder" style="font-size: 12px;"><img src="pelis\farenheit.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-4"><div class="poster-placeholder" style="font-size: 12px;"><img src="pelis\2073.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 12 -->
+    <div class="row mb-5 align-items-stretch">
+      <div class="col-md-6 order-md-2 mb-3 mb-md-0">
+        <div class="timeline-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-topic">PASO 12 (Maratón de Cierre)</span>
+            <span class="small text-muted">Futuro humano-tecnológico</span>
+          </div>
+          <h2 class="h3 mb-1">Gattaca, Blade Runner 2049, Upgrade, Transcendence, Bandersnatch &amp; The Kitchen</h2>
+          <h6 class="mb-3">La redefinición de la identidad, datos y sociedad</h6>
+          <p class="small text-secondary mb-3"><strong>Conexión:</strong> Big Data existencial, algoritmos aplicados al desarrollo social, alteración de libertades y desigualdad de oportunidades mediante tecnología.</p>
+          <p><strong>Sinopsis:</strong> Un compendio de escenarios futuros que desafían el concepto de humanidad. Desde la discriminación genética estructurada por bases de datos (*Gattaca*) hasta el uso de drones y algoritmos para segregar comunidades (*The Kitchen*), cerrando con la toma de decisiones del usuario en entornos interactivos (*Bandersnatch*).</p>
+          <div class="question-box">
+            <p class="mb-0 text-light"><strong>Pregunta detonadora:</strong> Como futuros creadores de tecnología y científicos de datos en México, ¿qué tipo de futuro algorítmico asumen la responsabilidad de construir?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="row g-2 h-100">
+          <div class="col-4"><div class="poster-placeholder" style="font-size: 11px;"><img src="pelis\gattaca.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-4"><div class="poster-placeholder" style="font-size: 11px;"><img src="pelis\blade_runner_2049.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-4"><div class="poster-placeholder" style="font-size: 11px;"><img src="pelis\upgrade.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-4"><div class="poster-placeholder" style="font-size: 11px;"><img src="pelis\trascendece.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-4"><div class="poster-placeholder" style="font-size: 11px;"><img src="pelis\badersnatch.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+          <div class="col-4"><div class="poster-placeholder" style="font-size: 11px;"><img src="pelis\Kitchen.jpeg" class="img-fluid rounded mx-auto d-block" alt="imagen1"></div></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="mb-0">
+      Hecho con <span class="heart">❤️</span> por 
+      <span style="color:#ff6600; font-weight:bold;">Adriana Ávalos Vargas</span> | 
+      <a href="https://github.com/Adriana-alterna" target="_blank">Mi GitHub</a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
